@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body onload="displayDateTime()">
+    <header class="header">
+      <div class="welcome-p">
+        <p class="welcome-text" id="username">Log in to get started</p>
+      </div>
+      <div class="logo">
+        <img src="./picp/Screenshot 2023-03-03 110831.png" alt="" />
+      </div>
+      <div class="login-box">
+        <div class="user-block">
+          <input
+            type="text"
+            id="inputuser"
+            name="inputName"
+            placeholder="user"
+            class="inputlogin"
+          />
+        </div>
+        <div class="pin-block">
+          <input
+            type="text"
+            id="inputpin"
+            name="inputName"
+            placeholder="PIN"
+            class="inputlogin"
+          />
+        </div>
+        <a href="#" class="log-btn" id="log-btn"><ion-icon name="arrow-forward-outline"></ion-icon></a>
+      </div>
+    </header>
+    <section class="main-section" id="main-section"> 
+      <div class="infos">
+        <div class="date">
+          <p class="heading">Current balance</p>
+          <div class="date_info">
+            <p>As of</p>
+            <p id="date-time"></p>
+          </div>
+        </div>
+        <div class="budget">
+          <p id="budgetoutput"></p>
+          <p>$</p>
+        </div>
+      </div>
+      <div class="bank">
+        <div class="movements" id="movements">
+        </div>
+        <div class="actions">
+          <div class="transfert-box">
+            <h3>Transfer Money</h3>
+            <div class="transfert-action">
+              <div class="transfert">
+                <input type="text" name="transfert-person" class="action-input"  id="transfertto"/>
+                <p>transfert to</p>
+              </div>
+              <div class="transfert">
+                <input 
+                  type="number"
+                  name="transfert-person"
+                  class="action-input"
+                  id="taransfertamount"
+                />
+                <p>Amount</p>
+              </div>
+
+              <button class="btn" id="transfertbtn">
+                <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+              </button>
+            </div>
+          </div>
+          <div class="loan-box">
+            <h3>Request loan</h3>
+            <div class="loan-action">
+              <div class="request">
+                <input id="Requestoutput"
+                  type="number"
+                  name="transfert-person"
+                  class="action-input"
+                />
+                <button class="btn" id="requestbtn">
+                  <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+                </button>
+              </div>
+              <p>Amount</p>
+            </div>
+          </div>
+          <div class="close-box">
+            <h3>Close account</h3>
+            <div class="transfert-action">
+              <div class="transfert">
+                <input type="text" name="transfert-person" class="action-input" id="deleteuser"/>
+                <p>Confirm user</p>
+              </div>
+              <div class="transfert">
+                <input
+                  type="password"
+                  name="transfert-person"
+                  class="action-input"
+                  id="deletepin"
+                />
+                <p>Confirm PIN</p>
+              </div>
+
+              <button class="btn" id="closebtn">
+                <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="totals">
+        <div class="actions-infos">
+          <div class="solde-block">
+            <p >IN :</p>
+            <p id="solde-in" class="solde-in">0 $</p>
+          </div>
+          <div class="solde-block">
+            <p>OUT :</p>
+            <p id="solde-out" class="solde-out">0 $</p>
+          </div>
+          <button class="sort-btn" id="sort-btn">Sort</button>
+        </div>
+        <p id="timeout" class="logout-text"></p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

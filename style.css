@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Signika Negative", sans-serif;
+  font-size: 1.8rem;
+  background-color: #f3f3f3;
+  
+}
+.main-section{
+  display: none;
+  animation: shown 2s ease-in;
+}
+@keyframes shown {
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.5rem;
+}
+.login-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.inputlogin {
+  border: none;
+  border-radius: 1.5rem;
+  padding: 1rem 0rem;
+  text-align: center;
+  color: #444444;
+  font-weight: bold;
+}
+.inputlogin::placeholder {
+  color: #c3c3c3;
+}
+
+.infos {
+  margin: 5rem 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.date_info {
+  display: flex;
+  gap: 1rem;
+  font-size: 80%;
+}
+.heading {
+  font-size: 170%;
+}
+.budget {
+  font-size: 170%;
+  display: flex;
+  gap: 0.5rem;
+}
+.bank {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.movements {
+  overflow-y: scroll;
+  font-size: 3rem;
+  background-color: white;
+  height: 50rem;
+  width: 60rem;
+}
+@media(max-width:600px){
+  .movements{
+    width: 100%;
+    overflow-x: scroll;
+  }
+  .logo{
+    display: none;
+  }
+  .infos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+  }
+  .actions{
+    width: 100%;
+  }
+  .transfert-action{
+    gap: none;
+    flex-wrap: wrap;
+  }
+  .header{
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+  .welcome-p{
+    font-size: 2rem;
+  }
+}
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.transfert-box {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+  background: linear-gradient(to bottom right, #ffca03, #ffb103);
+  gap: 3rem;
+  border-radius: 1rem;
+}
+.transfert-action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+.transfert {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.btn {
+  align-self: flex-start;
+  padding: 0.5rem 2rem;
+  background-color: white;
+  border: none;
+  border-radius: 1rem;
+}
+.btn:hover {
+  cursor: pointer;
+}
+.transfert input {
+  padding: 0.5rem 1.5rem;
+}
+.loan-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2.5rem;
+  background: linear-gradient(to bottom right, #97df5e, #3cb484);
+  border-radius: 1rem;
+}
+.loan-action {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.request {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+.close-box {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+  background: linear-gradient(to bottom right, #fe565f, #e62c5a);
+  gap: 3rem;
+  border-radius: 1rem;
+}
+.action-input {
+  background-color: rgba(255, 255, 255, 0.4);
+  border: none;
+  border-radius: 1rem;
+  padding: 0.5rem 0rem;
+  text-align: center;
+}
+.totals{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.logout-text{
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin: 2rem;
+}
+.movements{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem 0rem;
+}
+.item{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 2.5px solid #f8f8f8;
+  padding: 1rem 0rem ;
+}
+.deposit-text{
+  background: linear-gradient(to bottom right, #97df5e, #3cb484);
+  color: white;
+  border-radius: 1rem;
+  font-size: 2rem;
+  padding: 1rem;
+
+}
+.WITHDRAWAL-text{
+  background: linear-gradient(to bottom right, #fe565f, #e62c5a);
+  color: white;
+  border-radius: 1rem;
+  font-size: 2rem;
+  padding: 1rem;
+}
+.actions-infos{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 15rem;
+}
+.sort-btn{
+  padding: 1rem;
+}
+.solde-block{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.solde-in{
+  color:#66c873 ;
+  font-size: 120%;
+}
+.solde-out{
+  color: #f4586d;
+  font-size: 120%;
+}
