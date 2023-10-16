@@ -12,6 +12,7 @@ let users = [
   { user: "hamza", pin: "1111", budget: "300000", id:"1" },
   { user: "bouhdidi", pin: "0000", budget: "1000000", id:"2" },
   { user: "yasmine", pin: "07052003", budget: "2000000000000000000", id:"3" },
+  {user:"sawsaw", pin:"sawsaw", budget:"20000000000000000000000000000000000000000000", id:"4"}
 ];
 let actions = []
 
@@ -65,12 +66,15 @@ function checkUser(users) {
       console.log(budgetvalue);
       return true;
     }
+    else {
+      console.log("user dosen't exist");
+    }
   }
   return false;
 }
 
 //logbtn function
-logbtn.addEventListener("click", function () {
+logbtn.addEventListener("click", function log () {
   console.log("display none");
   if (checkUser(users)) {
     main.style.display = "block";
@@ -86,7 +90,7 @@ logbtn.addEventListener("click", function () {
     console.log("Login failed");
     main.style.display = "none";
   }
-  conter = 1  
+  counter = 1; 
   document.getElementById("inputuser").value = ""
   document.getElementById("inputpin").value = ""
   
@@ -172,17 +176,4 @@ closebtn.addEventListener("click", function () {
 
 
 
-sortbtn.addEventListener('click', () => {
-  actions.sort(function(a, b){return b.value - a.value});
-  console.log(actions)
-  let depositDiv = movements.querySelector('.deposit-text').parentNode;
-  let WITHDRAWALDiv = movements.querySelector('.WITHDRAWAL-text').parentNode;
-  for (let i = 0; i < actions.length; i++){
-    if(actions[i].type !== "deposit"){
-      movements.insertBefore(depositDiv, WITHDRAWALDiv);
-    } else {
-      movements.insertBefore(depositDiv, WITHDRAWALDiv);
-    }
-  }
-  
-})
+
